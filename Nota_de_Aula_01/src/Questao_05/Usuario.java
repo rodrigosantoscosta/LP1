@@ -1,13 +1,24 @@
 package Questao_05;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Usuario {
     String nome; int id;
-    //ArrayList<Livro> listaDeLivros = new ArrayList<Livro>();
+    private static ArrayList<Usuario> listaDeUsuarios = new ArrayList<>();
+    private static Scanner sc = new Scanner(System.in);
 
-    public void registrarLivro(String titulo, String autor){
-        Livro l = new Livro()
+    public Usuario(String nome, int id) {
+        this.nome = nome;
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getId() {
+        return id;
     }
 
 }
