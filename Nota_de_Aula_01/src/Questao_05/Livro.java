@@ -40,5 +40,4 @@ public class Livro {
         return quemEstaComOlivro;
     }
 
-    }
 }
