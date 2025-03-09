@@ -1,3 +1,5 @@
+package Questao_02;
+
 public class Matematica {
 
     double num1, num2;

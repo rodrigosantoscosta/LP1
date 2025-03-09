@@ -1,7 +1,15 @@
 package Questao_04;
 
 public class Conta {
-    double saldo;
+    private double saldo;
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
 
     public double consultaSaldo(){
         return saldo;

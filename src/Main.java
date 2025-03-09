@@ -1,5 +1,5 @@
 /*
-public class Main {
+public class < {
     public static void main(String[] args) {
         int x = 1;
         int repetir = 0;
