@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+
 public class Produto {
     private String codigo, nome, cor;
     private double peso, valor;
