@@ -9,7 +9,7 @@ public class Venda{
     }
 
 
-    private static void venderProduto(Produto p, int quantidade, String formaDePagamento){
+    public static void venderProduto(Produto p, int quantidade, String formaDePagamento){
         int quantidadeEstoque = p.getQuantidadeEstoque();
         formaDePagamento.toLowerCase();
 
@@ -20,7 +20,7 @@ public class Venda{
         }
 
         if(formaDePagamento.matches("pix | especie | transferencia | debito")){
-            System.out.println("O valor total da sua venda é de " + );
+            System.out.println("O valor total da sua venda é de ");
         }
     }
 

@@ -1,9 +1,19 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class Produto {
     private String codigo, nome, cor;
-    private double peso, valor;
+    private double peso;
+
+    public double getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(double tamanho) {
+        this.tamanho = tamanho;
+    }
+
+    private double tamanho;
+    private double valor;
 
     public int getQuantidadeEstoque() {
         return quantidadeEstoque;
@@ -15,10 +25,11 @@ public class Produto {
         this.quantidadeEstoque = quantidadeEstoque;
     }
 
-
-
     public static ArrayList<Produto> listaProdutos = new ArrayList<>();
 
+    public Produto(){
+
+    }
 
     public Produto(String codigo, String nome, double valor){
         this.codigo = codigo;
@@ -65,6 +76,16 @@ public class Produto {
         this.valor = valor;
     }
 
+    public static void exibirListaProdutos(ArrayList<Produto> listaProdutos){
+        if (!listaProdutos.isEmpty()){
+            for(Produto p : listaProdutos){
+                System.out.println("=======================================");
+                System.out.println("|  CÓDIGO  |       NOME       | QTD  |");
+                System.out.println("=======================================");
+                System.out.printf("| %-8s | %-15s | %-4d |\n", p.getCodigo(), p.getNome(), p.getQuantidadeEstoque());
+                System.out.println("=======================================");
+            }
+        }
 
+    }
 }
-
