@@ -14,7 +14,7 @@ public class Main {
         while(key){
             System.out.println("\n1 - Cadastrar produto\n2 - Vender\n3 - Exibir estoque\n4 - Sair do programa\nEscolha a opção do menu: ");
             escolha = sc.nextInt();
-            sc.nextLine();
+            sc.nextLine();// Reset do buffer do scanner
 
             switch(escolha){
 
@@ -34,10 +34,10 @@ public class Main {
                         System.out.println("1 - Usar tamanho\n2 - Usar peso");
                         int escolha_atributo = sc.nextInt();
 
-                        if (escolha == 1){
+                        if (escolha_atributo == 1){
                             System.out.println("Digite o tamanho do produto em metros: ");
                             p.setTamanho(sc.nextDouble());
-                        }else if(escolha == 2){
+                        }else if(escolha_atributo == 2){
                             System.out.println("Digite o peso do produto: ");
                             p.setPeso(sc.nextDouble());
                         }else{
@@ -53,6 +53,8 @@ public class Main {
 
                     System.out.println("Digite a quantidade que deseja adicionar em estoque do produto: ");
                     p.setQuantidadeEstoque(sc.nextInt());
+
+                    listaProdutos.add(p);
 
                     break;
 
@@ -80,6 +82,15 @@ public class Main {
                     }
 
                     System.out.println("Digite a quantidade que voce quer comprar do produto");
+                    int quantidade = sc.nextInt();
+
+                    System.out.println("Selecione a forma de pagamento:\n1 - Pix\nEspécie\n2 - Transferência\n 3 - Débito\n4 - Crédito");
+                    int escolhaPagamento = sc.nextInt();
+
+                    switch(escolhaPagamento){
+                        case 1:
+                    }
+
 
 
                 case 3:
@@ -88,12 +99,14 @@ public class Main {
 
                 case 4:
                     System.out.println("Saindo do programa!");
+                    key = false;
+
                     break;
 
                 default:
                     System.out.println("Erro: Opção invalida!");
                     break;
-                }
             }
         }
+    }
 }
