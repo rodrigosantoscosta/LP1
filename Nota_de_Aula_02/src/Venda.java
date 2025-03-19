@@ -1,3 +1,4 @@
+/*
 public class Venda{
     private String formaDePagamento;
     public String getFormaDePagamento() {
@@ -24,4 +25,4 @@ public class Venda{
         }
     }
 
-}
+}*/

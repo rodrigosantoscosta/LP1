@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Objects;
 public class Produto {
     private String codigo, nome, cor;
     private double peso;
@@ -25,7 +25,7 @@ public class Produto {
         this.quantidadeEstoque = quantidadeEstoque;
     }
 
-    public static ArrayList<Produto> listaProdutos = new ArrayList<>();
+//    public static ArrayList<Produto> listaProdutos = new ArrayList<>();
 
     public Produto(){
 
@@ -76,9 +76,9 @@ public class Produto {
         this.valor = valor;
     }
 
-    public static void exibirListaProdutos(ArrayList<Produto> listaProdutos){
-        if (!listaProdutos.isEmpty()){
-            for(Produto p : listaProdutos){
+    public static void exibirListaProdutos(ArrayList<Produto> listaProdutos) {
+        if (!listaProdutos.isEmpty()) {
+            for (Produto p : listaProdutos) {
                 System.out.println("=======================================");
                 System.out.println("|  CÓDIGO  |       NOME       | QTD  |");
                 System.out.println("=======================================");
@@ -87,4 +87,23 @@ public class Produto {
             }
         }
     }
+
+
+    public static void adicionarEstoque(int quantidadeAdicionada, String codigoProduto, ArrayList<Produto> listaProdutos){
+
+        Produto produtoAdicionado = null;
+        for (Produto p : listaProdutos) {
+            if(Objects.equals(p.getCodigo(), codigoProduto)) {
+                produtoAdicionado = p;
+                break;
+            }
+        }
+
+        if(produtoAdicionado == null){
+            System.out.println("Erro: Código de produto não existe em estoque!");
+        }else produtoAdicionado.setQuantidadeEstoque(produtoAdicionado.getQuantidadeEstoque() + quantidadeAdicionada);
+
+
+    }
+
 }
