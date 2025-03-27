@@ -38,20 +38,38 @@ public class Aluno {
     }
 
 
-    public float calculaMedia(float nota1, float nota2, float nota3){
-        float media;
-        media = (nota1 + nota2) / 2;
-        return media;
+
+    public float calculaMedia() {
+        return (nota1 + nota2 + nota3) / 3;
     }
 
-    public String statusAcademico(float nota1, float nota2, float nota3){
-        float media = calculaMedia(nota1, nota2, nota3);
-        if (media >= 70.0){
-            return ("aprovado");
-        }else if (media < 40.0){
-            return ("reprovado");
-        }else{
-            return ("na final");
+    public String statusAcademico() {
+        float media = calculaMedia();
+        if (media >= 70.0) {
+            return "aprovado";
+        } else if (media < 40.0) {
+            return "reprovado";
+        } else {
+            return "na final";
         }
     }
+
+    /*Não sei aonde estava com a cabeça fazendo isso*/
+
+//    public float calculaMedia(float nota1, float nota2, float nota3){
+//        float media;
+//        media = (nota1 + nota2 + nota3) / 3;
+//        return media;
+//    }
+//
+//    public String statusAcademico(float nota1, float nota2, float nota3){
+//        float media = calculaMedia(nota1, nota2, nota3);
+//        if (media >= 70.0){
+//            return ("aprovado");
+//        }else if (media < 40.0){
+//            return ("reprovado");
+//        }else{
+//            return ("na final");
+//        }
+//    }
 }

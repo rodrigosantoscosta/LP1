@@ -7,7 +7,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Aluno a = new Aluno();
         System.out.print("Digite o nome do aluno: ");
-        a.setNome(sc.next());
+        a.setNome(sc.nextLine());
 
         System.out.print("Digite a primeira nota do aluno: ");
         a.setNota1(sc.nextFloat());
@@ -18,9 +18,8 @@ public class Main {
         System.out.print("Digite a terceira nota do aluno: ");
         a.setNota3(sc.nextFloat());
 
-        float nota1 = a.getNota1(); float nota2  = a.getNota2(); float nota3 = a.getNota3();
-        String nome = a.getNome();
-
-        System.out.println("O aluno " + nome + " está " + a.statusAcademico(nota1, nota2, nota3));
+        //System.out.println("O aluno " + a.getNome() + " está " + a.statusAcademico(a.getNota1(), a.getNota2(), a.getNota3()));
+        System.out.println("O aluno " + a.getNome() + " está " + a.statusAcademico());
+        sc.close();
     }
 }

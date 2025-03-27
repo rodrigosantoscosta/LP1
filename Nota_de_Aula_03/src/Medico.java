@@ -17,5 +17,4 @@ public class Medico {
     public void tratarPaciente(){
         System.out.println("Tratando paciente~~");
     }
-
 }

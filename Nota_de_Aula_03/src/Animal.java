@@ -22,8 +22,6 @@ public class Animal {
         this.cor = cor;
     }
 
-
-
     public void comer(){
         System.out.println("Nham nham comendo~~");
     }

@@ -19,7 +19,7 @@ public class Main {
                     2 - Subtrair os dois numeros
                     3 - Dividir dois numeros
                     4 - Multiplicar os dois numeros
-                    5 - Sair do progama""");
+                    5 - Sair do programa""");
 
             int escolha = sc.nextInt();
 
@@ -44,5 +44,6 @@ public class Main {
                     System.out.println("Digite uma opção válida!");
             }
         }
+        sc.close();
     }
 }
