@@ -3,6 +3,7 @@ public class Cirurgiao extends Medico {
         super(trabalhaNoHospital);
     }
 
+    @Override
     public void tratarPaciente() {
         System.out.println("O cirurgião está tratando um paciente~~");
     }
@@ -10,6 +11,4 @@ public class Cirurgiao extends Medico {
     public void fazerIncisao() {
         System.out.println("Fazendo uma incisão~~");
     }
-
-
 }

@@ -1,5 +1,5 @@
 public class Medico {
-    private boolean trabalhaNoHospital;
+    protected boolean trabalhaNoHospital;
 
     public Medico(boolean trabalhaNoHospital) {
         this.trabalhaNoHospital = trabalhaNoHospital;

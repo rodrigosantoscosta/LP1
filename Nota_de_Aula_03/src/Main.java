@@ -33,5 +33,4 @@ public class Main {
         System.out.println("Um paciente precisa de um remedio com urgencia ");
         cg.receitar();
     }
-
 }

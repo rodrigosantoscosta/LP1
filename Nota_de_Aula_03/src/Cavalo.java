@@ -1,7 +1,7 @@
 public class Cavalo extends Animal{
     private String raca;
 
-    public Cavalo(float tamanho, String cor, String raca) {
+    public Cavalo(double tamanho, String cor, String raca) {
         super(tamanho, cor);
         this.raca = raca;
     }
@@ -17,4 +17,5 @@ public class Cavalo extends Animal{
     public void fugir(){
         System.out.println("Fugindo~~");
     }
+
 }

@@ -1,17 +1,18 @@
 public class Animal {
-    private float tamanho;
-    private String cor;
+    protected double tamanho;
+    protected String cor;
 
-    public Animal(float tamanho, String cor){
+    public Animal(double tamanho, String cor){
         this.tamanho = tamanho;
         this.cor = cor;
     }
-    public float getTamanho() {
-        return tamanho;
+
+    public void setTamanho(double tamanho) {
+        this.tamanho = tamanho;
     }
 
-    public void setTamanho(float tamanho) {
-        this.tamanho = tamanho;
+    public double getTamanho() {
+        return tamanho;
     }
 
     public String getCor() {
