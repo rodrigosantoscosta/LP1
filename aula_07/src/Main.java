@@ -15,6 +15,7 @@ public class Main {
         Disciplina d = new Disciplina();
         System.out.print("Digite o nome da disciplina: ");
         d.setNome(sc.next());
+        sc.close();
 
         d.cadastrarAluno(a);
         d.ministrarDisciplina(p);
@@ -23,6 +24,9 @@ public class Main {
 
         p.setCargo(CARGO.Professor);
         System.out.println("O cargo de "+ p.getNome()+ " é " + p.getCargo());
+
+        p.calcularSalario();
+        p.aplicarBonus();
 
     }
 }

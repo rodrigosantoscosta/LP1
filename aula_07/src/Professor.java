@@ -1,4 +1,5 @@
-public final class Professor extends Pessoa{
+//Java no dia menos verboso:
+public final class Professor extends Pessoa implements Remuneravel{
     public CARGO getCargo() {
         return cargo;
     }
@@ -23,6 +24,10 @@ public final class Professor extends Pessoa{
 
     private String especialidade;
 
+    public Professor(int idade, String nome) {
+        super(idade, nome);
+    }
+
     @Override
     public void quemSouEu() {
         System.out.println("Eu sou o professor" + getNome());
@@ -33,4 +38,14 @@ public final class Professor extends Pessoa{
         System.out.println("Eu ministro aula, minha especialidade é " + getEspecialidade());
     }
 
+
+    @Override
+    public void calcularSalario() {
+        System.out.println(getNome() + " tem um salário irado.");
+    }
+
+    @Override
+    public void aplicarBonus() {
+        System.out.println(getNome() +" recebeu um bonus bem sensacional.");
+    }
 }
