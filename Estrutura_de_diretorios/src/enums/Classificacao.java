@@ -1,4 +1,9 @@
 package enums;
+import model.Professor;import model.Aluno; import model.Coordenador;
 
-public class Classificacao {
+
+public enum Classificacao {
+    Professor,
+    Aluno,
+    Coordenador
 }
