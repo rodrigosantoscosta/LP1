@@ -2,6 +2,7 @@ package model;
 import model.interfaces.Folha;
 import enums.Classificacao;
 import service.ProfessorService;
+
 public final class Professor extends Pessoa implements Folha {
     private String especialização;
 

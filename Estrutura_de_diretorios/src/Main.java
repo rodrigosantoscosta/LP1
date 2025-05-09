@@ -1,3 +1,4 @@
+import model.Aluno;
 import model.Professor;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -11,5 +12,13 @@ public class Main {
 
         p.quem_sou_eu();
         System.out.println(p.toString());
+
+        Aluno a = new Aluno();
+        a.setNome("Alex");
+        a.setIdade(25);
+        a.setMatricula("20250035");
+
+        System.out.println(a.toString());
+        a.quem_sou_eu();
     }
 }
